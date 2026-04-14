@@ -1,0 +1,249 @@
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║         АЗЬ ЕСЬМ - HERO СЕКЦИЯ ДЛЯ TILDA ZERO BLOCK               ║
+║                                                                    ║
+║  ИНСТРУКЦИЯ:                                                       ║
+║  1. Создайте Zero Block в Tilda                                   ║
+║  2. Скопируйте весь код в HTML редактор Zero Block                ║
+║  3. Замените URL_ВАШЕГО_ЛОГОТИПА на ссылку на логотип             ║
+║  4. Замените URL_ФОНОВОГО_ИЗОБРАЖЕНИЯ на ваше фото                ║
+║  5. Сохраните и опубликуйте                                        ║
+╚═══════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+/* Подключаем переменные (если ещё не подключены глобально) */
+@import url('../brand-variables.css');
+
+.hero-azezm {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Фоновое изображение */
+.hero-azezm__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Градиентный оверлей */
+.hero-azezm__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), #000000);
+  z-index: 2;
+}
+
+/* Контент */
+.hero-azezm__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Логотип */
+.hero-azezm__logo {
+  height: 12rem;
+  width: auto;
+  margin: 0 auto 2rem;
+  animation: fadeInUp 1.5s ease-in;
+}
+
+/* Заголовок */
+.hero-azezm__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 6rem;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  font-weight: normal;
+  animation: fadeInUp 1.5s ease-in 0.2s backwards;
+}
+
+/* Подзаголовок */
+.hero-azezm__subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-in 0.4s backwards;
+}
+
+/* Кнопка CTA */
+.hero-azezm__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #D4AF37;
+  color: #000000;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.5s ease-in 0.6s backwards;
+  font-size: 1.125rem;
+}
+
+.hero-azezm__cta:hover {
+  background: #B89520;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.hero-azezm__cta-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hero-azezm__cta:hover .hero-azezm__cta-arrow {
+  transform: translateX(5px);
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+  .hero-azezm__title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-azezm__logo {
+    height: 10rem;
+  }
+  
+  .hero-azezm__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .hero-azezm {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .hero-azezm__logo {
+    height: 8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-azezm__title {
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-azezm__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-azezm__cta {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-azezm__title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-azezm__logo {
+    height: 6rem;
+  }
+}
+</style>
+
+<!-- HTML структура -->
+<section class="hero-azezm">
+  <!-- Фоновое изображение -->
+  <div class="hero-azezm__bg" style="background-image: url('URL_ФОНОВОГО_ИЗОБРАЖЕНИЯ');"></div>
+  
+  <!-- Тёмный градиент поверх фона -->
+  <div class="hero-azezm__overlay"></div>
+  
+  <!-- Контент -->
+  <div class="hero-azezm__content">
+    <!-- Логотип -->
+    <div>
+      <img 
+        src="URL_ВАШЕГО_ЛОГОТИПА" 
+        alt="Азь Есьм" 
+        class="hero-azezm__logo"
+      />
+    </div>
+    
+    <!-- Заголовок -->
+    <h1 class="hero-azezm__title">АЗЬ ЕСЬМ</h1>
+    
+    <!-- Подзаголовок -->
+    <p class="hero-azezm__subtitle">
+      Русская идентичность в современной уличной одежде
+    </p>
+    
+    <!-- Кнопка -->
+    <a href="#catalog" class="hero-azezm__cta">
+      <span>Смотреть коллекцию</span>
+      <svg class="hero-azezm__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║                      ВАРИАНТЫ ФОНОВЫХ ИЗОБРАЖЕНИЙ                 ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+Рекомендуемые варианты для фона:
+1. Модель в худи на улице (уличная мода)
+2. Текстура русского орнамента
+3. Православный храм
+4. Урбанистический пейзаж
+
+Требования к изображению:
+- Размер: минимум 1920x1080px
+- Формат: JPG (оптимизированный)
+- Размер файла: не более 500 КБ
+- Композиция: центральная или с акцентом по центру
+
+-->

@@ -1,0 +1,295 @@
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║           АЗЬ ЕСЬМ - ФУТЕР ДЛЯ TILDA ZERO BLOCK                   ║
+║                                                                    ║
+║  Подвал сайта с логотипом, навигацией и контактами                ║
+╚═══════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+.footer-azezm {
+  background: #1A1F3A;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 3rem 1.5rem;
+  color: #FFFFFF;
+}
+
+.footer-azezm__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-azezm__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Колонка бренда */
+.footer-azezm__brand {
+  grid-column: 1 / 2;
+}
+
+.footer-azezm__logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-azezm__logo {
+  height: 2rem;
+  width: auto;
+}
+
+.footer-azezm__brand-name {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.footer-azezm__tagline {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Заголовки колонок */
+.footer-azezm__column-title {
+  color: #D4AF37;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Ссылки */
+.footer-azezm__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-azezm__link-item {
+  margin-bottom: 0.75rem;
+}
+
+.footer-azezm__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footer-azezm__link:hover {
+  color: #FFFFFF;
+}
+
+/* Контакты */
+.footer-azezm__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-azezm__contact-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #D4AF37;
+}
+
+.footer-azezm__contact-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footer-azezm__contact-link:hover {
+  color: #FFFFFF;
+}
+
+/* Копирайт */
+.footer-azezm__bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-azezm__copyright {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+  .footer-azezm__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-azezm__brand {
+    grid-column: 1 / 3;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .footer-azezm {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-azezm__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-azezm__brand {
+    grid-column: 1;
+  }
+}
+</style>
+
+<!-- HTML структура -->
+<footer class="footer-azezm">
+  <div class="footer-azezm__container">
+    
+    <div class="footer-azezm__grid">
+      
+      <!-- Колонка: Бренд -->
+      <div class="footer-azezm__brand">
+        <div class="footer-azezm__logo-wrapper">
+          <img 
+            src="URL_ВАШЕГО_ЛОГОТИПА" 
+            alt="Азь Есьм" 
+            class="footer-azezm__logo"
+          />
+          <div class="footer-azezm__brand-name">АЗЬ ЕСЬМ</div>
+        </div>
+        <p class="footer-azezm__tagline">
+          Русская идентичность в современной уличной одежде
+        </p>
+      </div>
+      
+      <!-- Колонка: Навигация -->
+      <div>
+        <h3 class="footer-azezm__column-title">Навигация</h3>
+        <ul class="footer-azezm__links">
+          <li class="footer-azezm__link-item">
+            <a href="/" class="footer-azezm__link">Главная</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/philosophy" class="footer-azezm__link">Философия бренда</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/catalog" class="footer-azezm__link">Каталог</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/delivery" class="footer-azezm__link">Оплата и доставка</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/cart" class="footer-azezm__link">Корзина</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Колонка: Категории -->
+      <div>
+        <h3 class="footer-azezm__column-title">Категории</h3>
+        <ul class="footer-azezm__links">
+          <li class="footer-azezm__link-item">
+            <a href="/catalog/hoodies" class="footer-azezm__link">Худи</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/catalog/tshirts" class="footer-azezm__link">Футболки</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/catalog/shirts" class="footer-azezm__link">Рубашки</a>
+          </li>
+          <li class="footer-azezm__link-item">
+            <a href="/catalog/pants" class="footer-azezm__link">Брюки</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Колонка: Контакты -->
+      <div>
+        <h3 class="footer-azezm__column-title">Контакты</h3>
+        <ul class="footer-azezm__links">
+          <li class="footer-azezm__contact-item">
+            <svg class="footer-azezm__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:info@azezm.ru" class="footer-azezm__contact-link">
+              info@azezm.ru
+            </a>
+          </li>
+          <li class="footer-azezm__contact-item">
+            <svg class="footer-azezm__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            <a href="https://instagram.com/azezm" target="_blank" class="footer-azezm__contact-link">
+              @azezm
+            </a>
+          </li>
+          <li class="footer-azezm__contact-item">
+            <svg class="footer-azezm__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+            </svg>
+            <a href="https://youtube.com/@azezm" target="_blank" class="footer-azezm__contact-link">
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- Копирайт -->
+    <div class="footer-azezm__bottom">
+      <p class="footer-azezm__copyright">
+        © 2025 Азь Есьм. Все права защищены.
+      </p>
+    </div>
+    
+  </div>
+</footer>
+
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║                          КАСТОМИЗАЦИЯ                             ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+1. Замените URL_ВАШЕГО_ЛОГОТИПА на реальную ссылку
+
+2. Обновите ссылки на страницы:
+   - href="/" → главная
+   - href="/philosophy" → философия
+   - href="/catalog" → каталог
+   и т.д.
+
+3. Обновите контакты:
+   - Замените info@azezm.ru на ваш email
+   - Замените @azezm на ваш Instagram
+   - Добавьте/удалите соцсети по необходимости
+
+4. Добавьте больше соцсетей (примеры SVG):
+   
+   VK:
+   <svg viewBox="0 0 24 24" fill="currentColor">
+     <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.65 14.44h-1.33c-.58 0-.76-.47-1.8-1.51-0.91-0.88-1.31-1-1.54-1-0.32 0-0.41 0.09-0.41 0.53v1.37c0 0.37-0.12 0.58-1.06 0.58-1.79 0-3.77-1.08-5.17-3.09-2.09-2.94-2.66-5.15-2.66-5.6 0-0.23 0.09-0.44 0.53-0.44h1.33c0.39 0 0.54 0.18 0.69 0.61 0.77 2.14 2.05 4.01 2.58 4.01 0.2 0 0.29-0.09 0.29-0.59V9.5c-0.06-0.97-0.57-1.05-0.57-1.4 0-0.19 0.15-0.38 0.4-0.38h2.09c0.33 0 0.45 0.17 0.45 0.55v2.95c0 0.33 0.15 0.45 0.24 0.45 0.2 0 0.36-0.12 0.72-0.48 1.08-1.22 1.86-3.1 1.86-3.1 0.1-0.22 0.29-0.42 0.67-0.42h1.33c0.4 0 0.49 0.2 0.4 0.55-0.15 0.68-1.83 3.21-1.83 3.21-0.17 0.27-0.23 0.39 0 0.7 0.17 0.23 0.73 0.71 1.1 1.14 0.66 0.75 1.18 1.38 1.31 1.82 0.14 0.43-0.07 0.65-0.5 0.65z"/>
+   </svg>
+   
+   Telegram:
+   <svg viewBox="0 0 24 24" fill="currentColor">
+     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+   </svg>
+
+-->

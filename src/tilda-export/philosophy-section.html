@@ -1,0 +1,250 @@
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║      АЗЬ ЕСЬМ - СЕКЦИЯ ФИЛОСОФИИ ДЛЯ TILDA ZERO BLOCK             ║
+║                                                                    ║
+║  Секция с тремя колонками: Корни, Душа, Единство                 ║
+║  + Центральный блок с цитатой "Я ЕСТЬ"                            ║
+╚═══════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+.philosophy-azezm {
+  background: #1A1F3A;
+  padding: 5rem 1.5rem;
+  color: #FFFFFF;
+}
+
+.philosophy-azezm__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Заголовок секции */
+.philosophy-azezm__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #D4AF37;
+  margin-bottom: 4rem;
+  letter-spacing: 0.05em;
+}
+
+/* Сетка из 3 колонок */
+.philosophy-azezm__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Карточка философии */
+.philosophy-azezm__card {
+  text-align: center;
+}
+
+/* Иконка */
+.philosophy-azezm__icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-azezm__icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: #D4AF37;
+  stroke-width: 1.5;
+}
+
+/* Заголовок карточки */
+.philosophy-azezm__card-title {
+  font-size: 1.5rem;
+  color: #D4AF37;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+/* Текст карточки */
+.philosophy-azezm__card-text {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Центральный блок "Я ЕСТЬ" */
+.philosophy-azezm__core {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), transparent);
+  padding: 2.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+}
+
+.philosophy-azezm__core-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  color: #D4AF37;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.philosophy-azezm__core-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-azezm__core-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+  .philosophy-azezm__grid {
+    gap: 2rem;
+  }
+  
+  .philosophy-azezm__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .philosophy-azezm {
+    padding: 3rem 1rem;
+  }
+  
+  .philosophy-azezm__title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .philosophy-azezm__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .philosophy-azezm__core {
+    padding: 2rem 1.5rem;
+  }
+  
+  .philosophy-azezm__core-title {
+    font-size: 2rem;
+  }
+  
+  .philosophy-azezm__core-text {
+    font-size: 1rem;
+  }
+}
+</style>
+
+<!-- HTML структура -->
+<section class="philosophy-azezm">
+  <div class="philosophy-azezm__container">
+    
+    <!-- Заголовок -->
+    <h2 class="philosophy-azezm__title">Философия бренда</h2>
+    
+    <!-- Сетка из 3 карточек -->
+    <div class="philosophy-azezm__grid">
+      
+      <!-- Карточка 1: Корни -->
+      <div class="philosophy-azezm__card">
+        <div class="philosophy-azezm__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="philosophy-azezm__card-title">Корни</h3>
+        <p class="philosophy-azezm__card-text">
+          Мы черпаем вдохновение из глубины веков, сохраняя связь с историческими корнями и традициями наших предков.
+        </p>
+      </div>
+      
+      <!-- Карточка 2: Душа -->
+      <div class="philosophy-azezm__card">
+        <div class="philosophy-azezm__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="philosophy-azezm__card-title">Душа</h3>
+        <p class="philosophy-azezm__card-text">
+          Каждая вещь создается с душой, отражая глубокие ценности и внутреннюю силу русского характера.
+        </p>
+      </div>
+      
+      <!-- Карточка 3: Единство -->
+      <div class="philosophy-azezm__card">
+        <div class="philosophy-azezm__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="philosophy-azezm__card-title">Единство</h3>
+        <p class="philosophy-azezm__card-text">
+          Мы объединяем людей через общие ценности, создавая сообщество единомышленников.
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- Центральный блок "Я ЕСТЬ" -->
+    <div class="philosophy-azezm__core">
+      <h3 class="philosophy-azezm__core-title">«Я ЕСТЬ»</h3>
+      
+      <p class="philosophy-azezm__core-text">
+        Есть что-то, что никто не может отнять. Тебя могут посадить в тюрьму, 
+        избить, пытать, отобрать семью и имущество. Но тебя от самого тебя не отберут.
+      </p>
+      
+      <p class="philosophy-azezm__core-text">
+        Твоё бытие неразрывно связано с осознанием себя. Это и есть суть фразы 
+        <strong>«Азъ есмь»</strong> — «Я есть». Это утверждение бытия, 
+        базовый акт самосознания, который невозможно разрушить.
+      </p>
+      
+      <p class="philosophy-azezm__core-text">
+        Мы создали этот бренд не для продажи одежды. Мы создали его, чтобы напомнить 
+        каждому о главном — о том, что ты <strong>ЕСТЬ</strong>, что твоя суть неуничтожима, 
+        что твоя идентичность — это не то, что тебе дали, а то, что ты осознал.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║                       КАСТОМИЗАЦИЯ ИКОНОК                         ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+Текущие иконки (SVG):
+1. Корни - Щит (Shield)
+2. Душа - Сердце (Heart)  
+3. Единство - Люди (Users)
+
+Вы можете заменить SVG на любые другие иконки из:
+- Lucide Icons: https://lucide.dev/
+- Feather Icons: https://feathericons.com/
+- Hero Icons: https://heroicons.com/
+
+Просто скопируйте нужный SVG path и замените внутри <svg>
+
+-->

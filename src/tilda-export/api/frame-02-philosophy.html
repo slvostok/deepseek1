@@ -1,0 +1,300 @@
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║  FRAME 2: PHILOSOPHY SECTION - АЗЬ ЕСЬМ                          ║
+║  Размер: 1200px × 900px                                           ║
+║  Для Tilda Zero Block API                                         ║
+╚═══════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+/* ═══ PHILOSOPHY FRAME - 1200×900 ═══ */
+.philosophy-frame {
+  width: 1200px;
+  height: 900px;
+  margin: 0 auto;
+  background: #1A1F3A;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+/* Контейнер контента */
+.philosophy-frame__container {
+  width: 1120px; /* 1200 - 80px */
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Заголовок секции */
+.philosophy-frame__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  color: #D4AF37;
+  text-align: center;
+  margin: 0 0 64px 0;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+/* Сетка из 3 колонок */
+.philosophy-frame__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+/* Карточка */
+.philosophy-frame__card {
+  text-align: center;
+  width: 340px; /* (1120 - 96) / 3 */
+}
+
+/* Иконка */
+.philosophy-frame__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-frame__icon svg {
+  width: 32px;
+  height: 32px;
+  color: #D4AF37;
+  stroke: #D4AF37;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* Заголовок карточки */
+.philosophy-frame__card-title {
+  font-size: 24px;
+  color: #D4AF37;
+  margin: 0 0 16px 0;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+/* Текст карточки */
+.philosophy-frame__card-text {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Центральный блок "Я ЕСТЬ" */
+.philosophy-frame__core {
+  width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), transparent);
+  padding: 40px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.philosophy-frame__core-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 40px;
+  color: #D4AF37;
+  text-align: center;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.philosophy-frame__core-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  font-size: 18px;
+  margin: 0 0 24px 0;
+}
+
+.philosophy-frame__core-text:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy-frame__core-text strong {
+  color: #D4AF37;
+  font-weight: 500;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .philosophy-frame {
+    width: 100%;
+    height: auto;
+    padding: 48px 20px;
+  }
+  
+  .philosophy-frame__container {
+    width: 100%;
+  }
+  
+  .philosophy-frame__title {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+  
+  .philosophy-frame__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+  
+  .philosophy-frame__card {
+    width: 100%;
+  }
+  
+  .philosophy-frame__core {
+    width: 100%;
+    padding: 32px 24px;
+  }
+  
+  .philosophy-frame__core-title {
+    font-size: 32px;
+  }
+  
+  .philosophy-frame__core-text {
+    font-size: 16px;
+  }
+}
+</style>
+
+<!-- HTML структура фрейма -->
+<div class="philosophy-frame">
+  <div class="philosophy-frame__container">
+    
+    <!-- Заголовок -->
+    <h2 class="philosophy-frame__title">Философия бренда</h2>
+    
+    <!-- Сетка из 3 карточек -->
+    <div class="philosophy-frame__grid">
+      
+      <!-- Карточка 1: Корни -->
+      <div class="philosophy-frame__card">
+        <div class="philosophy-frame__icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="philosophy-frame__card-title">Корни</h3>
+        <p class="philosophy-frame__card-text">
+          Мы черпаем вдохновение из глубины веков, сохраняя связь с историческими корнями и традициями наших предков.
+        </p>
+      </div>
+      
+      <!-- Карточка 2: Душа -->
+      <div class="philosophy-frame__card">
+        <div class="philosophy-frame__icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="philosophy-frame__card-title">Душа</h3>
+        <p class="philosophy-frame__card-text">
+          Каждая вещь создается с душой, отражая глубокие ценности и внутреннюю силу русского характера.
+        </p>
+      </div>
+      
+      <!-- Карточка 3: Единство -->
+      <div class="philosophy-frame__card">
+        <div class="philosophy-frame__icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="philosophy-frame__card-title">Единство</h3>
+        <p class="philosophy-frame__card-text">
+          Мы объединяем людей через общие ценности, создавая сообщество единомышленников.
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- Центральный блок "Я ЕСТЬ" -->
+    <div class="philosophy-frame__core">
+      <h3 class="philosophy-frame__core-title">«Я ЕСТЬ»</h3>
+      
+      <p class="philosophy-frame__core-text">
+        Есть что-то, что никто не может отнять. Тебя могут посадить в тюрьму, 
+        избить, пытать, отобрать семью и имущество. Но тебя от самого тебя не отберут.
+      </p>
+      
+      <p class="philosophy-frame__core-text">
+        Твоё бытие неразрывно связано с осознанием себя. Это и есть суть фразы 
+        <strong>«Азъ есмь»</strong> — «Я есть». Это утверждение бытия, 
+        базовый акт самосознания, который невозможно разрушить.
+      </p>
+      
+      <p class="philosophy-frame__core-text">
+        Мы создали этот бренд не для продажи одежды. Мы создали его, чтобы напомнить 
+        каждому о главном — о том, что ты <strong>ЕСТЬ</strong>, что твоя суть неуничтожима, 
+        что твоя идентичность — это не то, что тебе дали, а то, что ты осознал.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║                        ПАРАМЕТРЫ ФРЕЙМА                           ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+Frame dimensions:
+  Width: 1200px (фиксированная)
+  Height: 900px
+  
+Layout:
+  Container: 1120px (1200 - 80px padding)
+  Padding: 80px top/bottom, 40px left/right
+  
+Grid (3 columns):
+  Column width: 340px
+  Gap: 48px
+  Total: 340×3 + 48×2 = 1116px ≈ 1120px
+  
+Core block:
+  Width: 900px
+  Padding: 40px
+  Border-radius: 12px
+  
+Element heights:
+  Title: 48px + 64px margin = 112px
+  Grid: ~280px (icon + title + text)
+  Gap: 64px
+  Core: ~280px
+  Total: ≈ 740px (fits in 900px frame)
+
+Colors:
+  Background: #1A1F3A
+  Title: #D4AF37
+  Text: rgba(255,255,255,0.7)
+  Icon bg: rgba(212,175,55,0.1)
+  Border: rgba(212,175,55,0.2)
+
+Fonts:
+  Section title: Georgia, 48px
+  Card title: Sans-serif, 24px
+  Card text: Sans-serif, 16px
+  Core title: Georgia, 40px
+  Core text: Sans-serif, 18px
+
+Grid calculation:
+  (1120px - 48px×2) / 3 = 341.33px ≈ 340px per column
+
+ВАЖНО ДЛЯ TILDA API:
+- Ширина = 1200px (точно!)
+- 3 равные колонки по 340px
+- Все элементы выровнены
+- Отступы симметричные
+-->

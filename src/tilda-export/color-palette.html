@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АЗЬ ЕСЬМ - Палитра цветов</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 3rem;
+      font-size: 1.125rem;
+    }
+    
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .color-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .color-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    
+    .color-swatch {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .color-name-overlay {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      letter-spacing: 0.05em;
+    }
+    
+    .color-info {
+      padding: 1.5rem;
+      background: white;
+    }
+    
+    .color-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    
+    .color-subtitle {
+      color: #666;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .color-codes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .color-code {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      background: #f8f8f8;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+    }
+    
+    .code-label {
+      color: #666;
+      font-weight: 600;
+    }
+    
+    .code-value {
+      color: #333;
+      user-select: all;
+    }
+    
+    .copy-btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: background 0.2s;
+    }
+    
+    .copy-btn:hover {
+      background: #45a049;
+    }
+    
+    .copy-btn.copied {
+      background: #2196F3;
+    }
+    
+    .usage-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #f8f8f8;
+      border-radius: 8px;
+    }
+    
+    .usage-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    .usage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .usage-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 6px;
+      border-left: 4px solid;
+    }
+    
+    .usage-item h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .usage-item p {
+      color: #666;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      
+      .container {
+        box-shadow: none;
+        padding: 1rem;
+      }
+      
+      .copy-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>АЗЬ ЕСЬМ</h1>
+    <p class="subtitle">Фирменная палитра цветов</p>
+    
+    <div class="palette-grid">
+      
+      <!-- Черный -->
+      <div class="color-card">
+        <div class="color-swatch" style="background: #000000;">
+          <div class="color-name-overlay">ЧЕРНЫЙ</div>
+        </div>
+        <div class="color-info">
+          <div class="color-title">Основной черный</div>
+          <div class="color-subtitle">Базовый фон, основной цвет</div>
+          <div class="color-codes">
+            <div class="color-code">
+              <span class="code-label">HEX:</span>
+              <span class="code-value">#000000</span>
+              <button class="copy-btn" onclick="copyToClipboard('#000000', this)">Copy</button>
+            </div>
+            <div class="color-code">
+              <span class="code-label">RGB:</span>
+              <span class="code-value">0, 0, 0</span>
+              <button class="copy-btn" onclick="copyToClipboard('rgb(0, 0, 0)', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Белый -->
+      <div class="color-card">
+        <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #e0e0e0;">
+          <div class="color-name-overlay" style="color: #000; text-shadow: none;">БЕЛЫЙ</div>
+        </div>
+        <div class="color-info">
+          <div class="color-title">Чистый белый</div>
+          <div class="color-subtitle">Текст, акценты на темном</div>
+          <div class="color-codes">
+            <div class="color-code">
+              <span class="code-label">HEX:</span>
+              <span class="code-value">#FFFFFF</span>
+              <button class="copy-btn" onclick="copyToClipboard('#FFFFFF', this)">Copy</button>
+            </div>
+            <div class="color-code">
+              <span class="code-label">RGB:</span>
+              <span class="code-value">255, 255, 255</span>
+              <button class="copy-btn" onclick="copyToClipboard('rgb(255, 255, 255)', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Кремовый -->
+      <div class="color-card">
+        <div class="color-swatch" style="background: #F5F5DC;">
+          <div class="color-name-overlay" style="color: #333; text-shadow: none;">КРЕМОВЫЙ</div>
+        </div>
+        <div class="color-info">
+          <div class="color-title">Кремовый (Beige)</div>
+          <div class="color-subtitle">Альтернативный светлый фон</div>
+          <div class="color-codes">
+            <div class="color-code">
+              <span class="code-label">HEX:</span>
+              <span class="code-value">#F5F5DC</span>
+              <button class="copy-btn" onclick="copyToClipboard('#F5F5DC', this)">Copy</button>
+            </div>
+            <div class="color-code">
+              <span class="code-label">RGB:</span>
+              <span class="code-value">245, 245, 220</span>
+              <button class="copy-btn" onclick="copyToClipboard('rgb(245, 245, 220)', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Темно-синий -->
+      <div class="color-card">
+        <div class="color-swatch" style="background: #1A1F3A;">
+          <div class="color-name-overlay">NAVY</div>
+        </div>
+        <div class="color-info">
+          <div class="color-title">Темно-синий (Midnight Navy)</div>
+          <div class="color-subtitle">Фон секций, элементы UI</div>
+          <div class="color-codes">
+            <div class="color-code">
+              <span class="code-label">HEX:</span>
+              <span class="code-value">#1A1F3A</span>
+              <button class="copy-btn" onclick="copyToClipboard('#1A1F3A', this)">Copy</button>
+            </div>
+            <div class="color-code">
+              <span class="code-label">RGB:</span>
+              <span class="code-value">26, 31, 58</span>
+              <button class="copy-btn" onclick="copyToClipboard('rgb(26, 31, 58)', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Красный -->
+      <div class="color-card">
+        <div class="color-swatch" style="background: #C41E3A;">
+          <div class="color-name-overlay">КРАСНЫЙ</div>
+        </div>
+        <div class="color-info">
+          <div class="color-title">Фирменный красный (Crimson)</div>
+          <div class="color-subtitle">Акценты, бейджи, CTA</div>
+          <div class="color-codes">
+            <div class="color-code">
+              <span class="code-label">HEX:</span>
+              <span class="code-value">#C41E3A</span>
+              <button class="copy-btn" onclick="copyToClipboard('#C41E3A', this)">Copy</button>
+            </div>
+            <div class="color-code">
+              <span class="code-label">RGB:</span>
+              <span class="code-value">196, 30, 58</span>
+              <button class="copy-btn" onclick="copyToClipboard('rgb(196, 30, 58)', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Золотой -->
+      <div class="color-card">
+        <div class="color-swatch" style="background: #D4AF37;">
+          <div class="color-name-overlay">ЗОЛОТОЙ</div>
+        </div>
+        <div class="color-info">
+          <div class="color-title">Золотой (Byzantine Gold)</div>
+          <div class="color-subtitle">Заголовки, кнопки, премиум</div>
+          <div class="color-codes">
+            <div class="color-code">
+              <span class="code-label">HEX:</span>
+              <span class="code-value">#D4AF37</span>
+              <button class="copy-btn" onclick="copyToClipboard('#D4AF37', this)">Copy</button>
+            </div>
+            <div class="color-code">
+              <span class="code-label">RGB:</span>
+              <span class="code-value">212, 175, 55</span>
+              <button class="copy-btn" onclick="copyToClipboard('rgb(212, 175, 55)', this)">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Применение -->
+    <div class="usage-section">
+      <h2 class="usage-title">Применение цветов</h2>
+      <div class="usage-grid">
+        
+        <div class="usage-item" style="border-color: #000000;">
+          <h3>Черный #000000</h3>
+          <p>Основной фон сайта, темы, карточки товаров, контрастный текст на светлом</p>
+        </div>
+        
+        <div class="usage-item" style="border-color: #FFFFFF;">
+          <h3>Белый #FFFFFF</h3>
+          <p>Основной текст на темном фоне, иконки, границы, hover эффекты</p>
+        </div>
+        
+        <div class="usage-item" style="border-color: #F5F5DC;">
+          <h3>Кремовый #F5F5DC</h3>
+          <p>Альтернативный светлый фон для секций, карточек, визуального разделения</p>
+        </div>
+        
+        <div class="usage-item" style="border-color: #1A1F3A;">
+          <h3>Navy #1A1F3A</h3>
+          <p>Фон секций философии, футера, элементов навигации, премиум области</p>
+        </div>
+        
+        <div class="usage-item" style="border-color: #C41E3A;">
+          <h3>Красный #C41E3A</h3>
+          <p>Бейджи "Новинка", важные акценты, призывы к действию, распродажи</p>
+        </div>
+        
+        <div class="usage-item" style="border-color: #D4AF37;">
+          <h3>Золотой #D4AF37</h3>
+          <p>Основной цвет бренда: заголовки, кнопки, логотип, премиум элементы</p>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  <script>
+    function copyToClipboard(text, button) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = button.textContent;
+        button.textContent = 'Copied!';
+        button.classList.add('copied');
+        
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        alert('Не удалось скопировать: ' + err);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+{
+  "project": {
+    "name": "АЗЬ ЕСЬМ",
+    "description": "Русская идентичность в современной уличной одежде",
+    "version": "1.0.0",
+    "created": "2025-12-16",
+    "type": "brand-website"
+  },
+  
+  "frames": [
+    {
+      "id": "frame-01-hero",
+      "name": "Hero Section",
+      "file": "frame-01-hero.html",
+      "dimensions": {
+        "width": 1200,
+        "height": 800,
+        "unit": "px"
+      },
+      "background": "#000000",
+      "padding": {
+        "top": 0,
+        "right": 40,
+        "bottom": 0,
+        "left": 40
+      },
+      "content_area": {
+        "width": 1120,
+        "height": 800
+      },
+      "elements": [
+        {
+          "type": "image",
+          "name": "background",
+          "position": "absolute",
+          "dimensions": "1200×800",
+          "z_index": 1
+        },
+        {
+          "type": "overlay",
+          "gradient": "linear-gradient(to bottom, rgba(0,0,0,0.7), #000000)",
+          "z_index": 2
+        },
+        {
+          "type": "svg",
+          "name": "logo",
+          "dimensions": "200×200",
+          "position": "center",
+          "y_offset": 150
+        },
+        {
+          "type": "heading",
+          "level": "h1",
+          "text": "АЗЬ ЕСЬМ",
+          "font": "Georgia",
+          "size": 96,
+          "color": "#FFFFFF",
+          "spacing": "0.2em",
+          "position": "center",
+          "y_offset": 380
+        },
+        {
+          "type": "text",
+          "text": "Русская идентичность в современной уличной одежде",
+          "size": 24,
+          "color": "rgba(255,255,255,0.8)",
+          "position": "center",
+          "y_offset": 500
+        },
+        {
+          "type": "button",
+          "text": "Смотреть коллекцию",
+          "dimensions": "280×56",
+          "background": "#D4AF37",
+          "color": "#000000",
+          "position": "center",
+          "y_offset": 600
+        }
+      ],
+      "animations": [
+        {
+          "type": "fadeInUp",
+          "duration": "1.5s",
+          "stagger": "0.2s"
+        }
+      ]
+    },
+    
+    {
+      "id": "frame-02-philosophy",
+      "name": "Philosophy Section",
+      "file": "frame-02-philosophy.html",
+      "dimensions": {
+        "width": 1200,
+        "height": 900,
+        "unit": "px"
+      },
+      "background": "#1A1F3A",
+      "padding": {
+        "top": 80,
+        "right": 40,
+        "bottom": 80,
+        "left": 40
+      },
+      "content_area": {
+        "width": 1120,
+        "height": 740
+      },
+      "grid": {
+        "type": "3-column",
+        "columns": 3,
+        "column_width": 340,
+        "gap": 48,
+        "total_width": 1116
+      },
+      "elements": [
+        {
+          "type": "heading",
+          "level": "h2",
+          "text": "Философия бренда",
+          "font": "Georgia",
+          "size": 48,
+          "color": "#D4AF37",
+          "position": "center",
+          "margin_bottom": 64
+        },
+        {
+          "type": "grid",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Корни",
+              "description": "Мы черпаем вдохновение из глубины веков..."
+            },
+            {
+              "icon": "heart",
+              "title": "Душа",
+              "description": "Каждая вещь создается с душой..."
+            },
+            {
+              "icon": "users",
+              "title": "Единство",
+              "description": "Мы объединяем людей через общие ценности..."
+            }
+          ]
+        },
+        {
+          "type": "quote_block",
+          "width": 900,
+          "title": "«Я ЕСТЬ»",
+          "paragraphs": 3,
+          "font_size": 18,
+          "padding": 40,
+          "border": "1px solid rgba(212,175,55,0.2)",
+          "border_radius": 12
+        }
+      ]
+    },
+    
+    {
+      "id": "frame-03-products",
+      "name": "Products Grid",
+      "file": "frame-03-products.html",
+      "dimensions": {
+        "width": 1200,
+        "height": 1400,
+        "unit": "px"
+      },
+      "background": "#000000",
+      "padding": {
+        "top": 80,
+        "right": 40,
+        "bottom": 80,
+        "left": 40
+      },
+      "content_area": {
+        "width": 1120,
+        "height": 1240
+      },
+      "grid": {
+        "type": "3-column",
+        "columns": 3,
+        "column_width": 352,
+        "gap": 32,
+        "rows": 2,
+        "total_width": 1120,
+        "card_height": 635
+      },
+      "elements": [
+        {
+          "type": "heading",
+          "level": "h2",
+          "text": "Коллекция",
+          "font": "Georgia",
+          "size": 48,
+          "color": "#D4AF37",
+          "position": "center"
+        },
+        {
+          "type": "subtitle",
+          "text": "Избранные вещи с глубоким смыслом",
+          "size": 20,
+          "color": "rgba(255,255,255,0.6)",
+          "margin_bottom": 64
+        },
+        {
+          "type": "product_grid",
+          "items": 6,
+          "card_structure": {
+            "image": {
+              "width": 352,
+              "height": 469,
+              "aspect_ratio": "3:4"
+            },
+            "badge": {
+              "position": "top-right",
+              "background": "#C41E3A",
+              "text": "Новинка"
+            },
+            "content": {
+              "padding": 24,
+              "category": {
+                "size": 14,
+                "color": "#D4AF37",
+                "uppercase": true
+              },
+              "name": {
+                "size": 20,
+                "color": "#FFFFFF"
+              },
+              "description": {
+                "size": 14,
+                "color": "rgba(255,255,255,0.6)"
+              },
+              "price": {
+                "size": 24,
+                "color": "#D4AF37"
+              },
+              "button": {
+                "size": 14,
+                "border": "1px solid rgba(255,255,255,0.3)"
+              }
+            }
+          }
+        }
+      ],
+      "hover_effects": {
+        "card": {
+          "border_color": "#D4AF37",
+          "transform": "translateY(-8px)",
+          "shadow": "0 20px 40px rgba(212,175,55,0.15)"
+        },
+        "image": {
+          "transform": "scale(1.05)"
+        }
+      }
+    },
+    
+    {
+      "id": "frame-04-footer",
+      "name": "Footer",
+      "file": "frame-04-footer.html",
+      "dimensions": {
+        "width": 1200,
+        "height": 400,
+        "unit": "px"
+      },
+      "background": "#1A1F3A",
+      "border_top": "1px solid rgba(212,175,55,0.2)",
+      "padding": {
+        "top": 48,
+        "right": 40,
+        "bottom": 48,
+        "left": 40
+      },
+      "content_area": {
+        "width": 1120,
+        "height": 304
+      },
+      "grid": {
+        "type": "4-column",
+        "columns": 4,
+        "column_width": 260,
+        "gap": 40,
+        "total_width": 1120
+      },
+      "elements": [
+        {
+          "type": "brand_column",
+          "logo_height": 32,
+          "brand_name": "АЗЬ ЕСЬМ",
+          "font": "Georgia",
+          "size": 24,
+          "tagline": {
+            "text": "Русская идентичность в современной уличной одежде",
+            "size": 14,
+            "color": "rgba(255,255,255,0.6)"
+          }
+        },
+        {
+          "type": "links_column",
+          "title": "Навигация",
+          "links": 5,
+          "link_size": 14
+        },
+        {
+          "type": "links_column",
+          "title": "Категории",
+          "links": 5,
+          "link_size": 14
+        },
+        {
+          "type": "contacts_column",
+          "title": "Контакты",
+          "items": 3,
+          "icon_size": 16,
+          "link_size": 14
+        },
+        {
+          "type": "copyright",
+          "text": "© 2025 Азь Есьм. Все права защищены.",
+          "size": 14,
+          "color": "rgba(255,255,255,0.4)",
+          "position": "center",
+          "border_top": "1px solid rgba(255,255,255,0.1)",
+          "padding_top": 32
+        }
+      ]
+    }
+  ],
+  
+  "design_system": {
+    "colors": {
+      "brand_black": "#000000",
+      "brand_white": "#FFFFFF",
+      "brand_cream": "#F5F5DC",
+      "brand_navy": "#1A1F3A",
+      "brand_red": "#C41E3A",
+      "brand_gold": "#D4AF37",
+      "brand_gold_hover": "#B89520"
+    },
+    "typography": {
+      "heading_font": "Georgia, 'Times New Roman', serif",
+      "body_font": "system-ui, -apple-system, sans-serif",
+      "sizes": {
+        "hero": 96,
+        "h1": 64,
+        "h2": 48,
+        "h3": 40,
+        "h4": 24,
+        "body_large": 20,
+        "body": 16,
+        "small": 14,
+        "tiny": 12
+      },
+      "letter_spacing": {
+        "tight": "-0.02em",
+        "normal": "0",
+        "wide": "0.05em",
+        "wider": "0.1em",
+        "widest": "0.2em"
+      }
+    },
+    "spacing": {
+      "container_max": 1280,
+      "container_standard": 1200,
+      "content_area": 1120,
+      "padding_horizontal": 40,
+      "padding_vertical": 80,
+      "gap_small": 16,
+      "gap_medium": 32,
+      "gap_large": 48,
+      "gap_xlarge": 64
+    },
+    "effects": {
+      "border_radius": {
+        "small": 4,
+        "medium": 8,
+        "large": 12,
+        "full": 9999
+      },
+      "transitions": {
+        "fast": "0.15s ease",
+        "normal": "0.3s ease",
+        "slow": "0.5s ease"
+      }
+    }
+  },
+  
+  "tilda_api": {
+    "version": "1.0",
+    "endpoints": {
+      "add_block": "https://api.tildacdn.info/v1/addblock",
+      "update_block": "https://api.tildacdn.info/v1/updateblock",
+      "get_page": "https://api.tildacdn.info/v1/getpage"
+    },
+    "required_params": [
+      "publickey",
+      "secretkey",
+      "projectid",
+      "pageid"
+    ],
+    "block_settings": {
+      "width": 1200,
+      "responsive": true,
+      "mobile_breakpoint": 768,
+      "tablet_breakpoint": 1024
+    }
+  },
+  
+  "export_checklist": {
+    "images": [
+      "Логотип (PNG, прозрачный, ~500×500px)",
+      "Фоновое фото Hero (JPG, 1920×1080px, оптимизировано)",
+      "Фото товаров (JPG, 600×800px, aspect 3:4, 6 шт минимум)"
+    ],
+    "content": [
+      "Тексты описаний товаров",
+      "Цены товаров в рублях",
+      "Email для контактов",
+      "Ссылки на соцсети (Instagram, VK и др.)"
+    ],
+    "settings": [
+      "API ключи Tilda (public + secret)",
+      "ID проекта и страницы",
+      "Проверка доступа к Zero Block"
+    ]
+  },
+  
+  "notes": {
+    "important": [
+      "Все фреймы имеют фиксированную ширину 1200px",
+      "Внутренние отступы по 40px слева и справа (content area = 1120px)",
+      "Все элементы выровнены по сетке",
+      "Ширина текста = ширина шейпов = 1200px",
+      "Используются точные расчеты для колонок и gap",
+      "Все изображения оптимизированы (< 500KB)",
+      "SVG иконки встроены inline для быстрой загрузки",
+      "Hover эффекты добавлены для интерактивности",
+      "Адаптивность настроена для мобильных устройств"
+    ],
+    "calculations": {
+      "3_column_grid": "(1120 - gap×2) / 3 = column_width",
+      "4_column_grid": "(1120 - gap×3) / 4 = column_width",
+      "philosophy_columns": "(1120 - 48×2) / 3 = 341px ≈ 340px",
+      "product_cards": "(1120 - 32×2) / 3 = 352px",
+      "footer_columns": "(1120 - 40×3) / 4 = 260px"
+    }
+  }
+}

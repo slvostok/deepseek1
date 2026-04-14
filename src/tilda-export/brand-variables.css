@@ -1,0 +1,306 @@
+/*
+ * ╔═══════════════════════════════════════════════════════════════════╗
+ * ║           АЗЬ ЕСЬМ - CSS ПЕРЕМЕННЫЕ ДЛЯ TILDA                     ║
+ * ║        Вставьте этот код в "Настройки сайта" -> "CSS"            ║
+ * ╚═══════════════════════════════════════════════════════════════════╝
+ */
+
+:root {
+  /* ═══ ФИРМЕННАЯ ПАЛИТРА БРЕНДА ═══ */
+  
+  /* Основные цвета */
+  --brand-black: #000000;        /* Основной черный */
+  --brand-white: #FFFFFF;        /* Чистый белый */
+  --brand-cream: #F5F5DC;        /* Кремовый (Beige) */
+  --brand-navy: #1A1F3A;         /* Темно-синий (Midnight Navy) */
+  --brand-red: #C41E3A;          /* Фирменный красный (Crimson) */
+  --brand-gold: #D4AF37;         /* Золотой (Byzantine Gold) */
+  
+  /* Градации для использования */
+  --brand-red-hover: #A01830;    /* Темнее для hover эффектов */
+  --brand-gold-hover: #B89520;   /* Темнее для hover эффектов */
+  
+  /* Прозрачности для наложений */
+  --brand-black-80: rgba(0, 0, 0, 0.8);
+  --brand-black-70: rgba(0, 0, 0, 0.7);
+  --brand-black-50: rgba(0, 0, 0, 0.5);
+  --brand-black-20: rgba(0, 0, 0, 0.2);
+  
+  --brand-white-90: rgba(255, 255, 255, 0.9);
+  --brand-white-70: rgba(255, 255, 255, 0.7);
+  --brand-white-50: rgba(255, 255, 255, 0.5);
+  --brand-white-10: rgba(255, 255, 255, 0.1);
+  
+  --brand-gold-10: rgba(212, 175, 55, 0.1);
+  --brand-gold-20: rgba(212, 175, 55, 0.2);
+  --brand-red-30: rgba(196, 30, 58, 0.3);
+  
+  /* ═══ ТИПОГРАФИКА ═══ */
+  
+  /* Размеры шрифтов */
+  --text-hero: 6rem;             /* 96px - Герой секции */
+  --text-hero-mobile: 3.5rem;    /* 56px - Герой на мобильных */
+  --text-h1: 4rem;               /* 64px */
+  --text-h2: 3rem;               /* 48px */
+  --text-h3: 2rem;               /* 32px */
+  --text-h4: 1.5rem;             /* 24px */
+  --text-body: 1rem;             /* 16px */
+  --text-body-lg: 1.25rem;       /* 20px */
+  --text-small: 0.875rem;        /* 14px */
+  
+  /* Начертания */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* Межстрочный интервал */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Межбуквенное расстояние (tracking) */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  --letter-spacing-widest: 0.2em;
+  
+  /* ═══ РАЗМЕРЫ И ОТСТУПЫ ═══ */
+  
+  /* Контейнеры */
+  --container-max: 1280px;
+  --container-wide: 1440px;
+  --container-narrow: 800px;
+  
+  /* Отступы секций */
+  --section-padding: 5rem;        /* 80px */
+  --section-padding-mobile: 3rem; /* 48px */
+  
+  /* Внутренние отступы */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+  --spacing-2xl: 4rem;     /* 64px */
+  --spacing-3xl: 6rem;     /* 96px */
+  
+  /* ═══ ЭФФЕКТЫ ═══ */
+  
+  /* Скругления */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  /* Тени */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Переходы */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* ═══ ГРАДИЕНТЫ ═══ */
+  
+  /* Тёмный градиент для наложения на фото */
+  --gradient-dark-overlay: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), #000000);
+  
+  /* Золотой акцент */
+  --gradient-gold: linear-gradient(135deg, var(--brand-gold), #B89520);
+  
+  /* Тёмный фон с градиентом */
+  --gradient-navy: linear-gradient(to bottom, var(--brand-navy), #000000);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════ */
+/*                      ГОТОВЫЕ КЛАССЫ ДЛЯ TILDA                        */
+/* ═══════════════════════════════════════════════════════════════════ */
+
+/* Типографика бренда */
+.brand-serif {
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: var(--letter-spacing-wider);
+}
+
+.brand-title-hero {
+  font-size: var(--text-hero);
+  font-family: Georgia, serif;
+  letter-spacing: var(--letter-spacing-wider);
+  line-height: var(--line-height-tight);
+}
+
+.brand-title-large {
+  font-size: var(--text-h1);
+  font-family: Georgia, serif;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--brand-gold);
+}
+
+/* Кнопки */
+.brand-btn-gold {
+  background: var(--brand-gold);
+  color: var(--brand-black);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-btn-gold:hover {
+  background: var(--brand-gold-hover);
+  transform: translateY(-2px);
+}
+
+.brand-btn-outline {
+  background: transparent;
+  color: var(--brand-white);
+  padding: 1rem 2rem;
+  border: 2px solid var(--brand-white);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.brand-btn-outline:hover {
+  background: var(--brand-white);
+  color: var(--brand-black);
+}
+
+/* Карточки */
+.brand-card {
+  background: var(--brand-black);
+  border: 1px solid var(--brand-white-10);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.brand-card:hover {
+  border-color: var(--brand-gold);
+  transform: translateY(-4px);
+}
+
+/* Разделители */
+.brand-divider {
+  height: 1px;
+  width: 6rem;
+  background: linear-gradient(to right, transparent, var(--brand-red), transparent);
+  margin: 2rem auto;
+}
+
+.brand-divider-gold {
+  height: 1px;
+  width: 6rem;
+  background: var(--brand-gold);
+  margin: 2rem auto;
+}
+
+/* Иконки */
+.brand-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  background: var(--brand-gold-10);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Фоны */
+.brand-bg-navy {
+  background: var(--brand-navy);
+  color: var(--brand-white);
+}
+
+.brand-bg-black {
+  background: var(--brand-black);
+  color: var(--brand-white);
+}
+
+.brand-bg-cream {
+  background: var(--brand-cream);
+  color: var(--brand-black);
+}
+
+/* Градиентные фоны */
+.brand-bg-gradient-navy {
+  background: var(--gradient-navy);
+  color: var(--brand-white);
+}
+
+/* Секции */
+.brand-section {
+  padding: var(--section-padding) var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .brand-section {
+    padding: var(--section-padding-mobile) var(--spacing-sm);
+  }
+  
+  .brand-title-hero {
+    font-size: var(--text-hero-mobile);
+  }
+}
+
+/* Контейнеры */
+.brand-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.brand-container-narrow {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Текстовые стили */
+.brand-text-gold {
+  color: var(--brand-gold);
+}
+
+.brand-text-red {
+  color: var(--brand-red);
+}
+
+.brand-text-muted {
+  color: var(--brand-white-70);
+}
+
+/* Анимации при прокрутке */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Эффект параллакса для фона */
+.brand-parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}

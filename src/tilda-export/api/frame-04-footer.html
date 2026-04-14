@@ -1,0 +1,354 @@
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║  FRAME 4: FOOTER - АЗЬ ЕСЬМ                                       ║
+║  Размер: 1200px × 400px                                           ║
+║  Для Tilda Zero Block API                                         ║
+╚═══════════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+/* ═══ FOOTER FRAME - 1200×400 ═══ */
+.footer-frame {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  background: #1A1F3A;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 48px 40px;
+  box-sizing: border-box;
+}
+
+/* Контейнер */
+.footer-frame__container {
+  width: 1120px; /* 1200 - 80px */
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Сетка колонок */
+.footer-frame__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+/* Колонка */
+.footer-frame__column {
+  width: 260px; /* (1120 - 120) / 4 */
+}
+
+/* Колонка бренда (первая) */
+.footer-frame__brand {
+  width: 260px;
+}
+
+.footer-frame__logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-frame__logo {
+  height: 32px;
+  width: auto;
+}
+
+.footer-frame__brand-name {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-frame__tagline {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Заголовки колонок */
+.footer-frame__column-title {
+  color: #D4AF37;
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Список ссылок */
+.footer-frame__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-frame__link-item {
+  margin-bottom: 12px;
+}
+
+.footer-frame__link-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-frame__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.footer-frame__link:hover {
+  color: #FFFFFF;
+}
+
+/* Контакты */
+.footer-frame__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-frame__contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-frame__contact-icon {
+  width: 16px;
+  height: 16px;
+  color: #D4AF37;
+  flex-shrink: 0;
+}
+
+.footer-frame__contact-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.footer-frame__contact-link:hover {
+  color: #FFFFFF;
+}
+
+/* Копирайт */
+.footer-frame__bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-frame__copyright {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .footer-frame {
+    width: 100%;
+    height: auto;
+    padding: 32px 20px;
+  }
+  
+  .footer-frame__container {
+    width: 100%;
+  }
+  
+  .footer-frame__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  
+  .footer-frame__column,
+  .footer-frame__brand {
+    width: 100%;
+  }
+}
+</style>
+
+<!-- HTML структура фрейма -->
+<footer class="footer-frame">
+  <div class="footer-frame__container">
+    
+    <div class="footer-frame__grid">
+      
+      <!-- Колонка 1: Бренд -->
+      <div class="footer-frame__brand">
+        <div class="footer-frame__logo-wrapper">
+          <!-- Логотип SVG (замените на свой) -->
+          <svg class="footer-frame__logo" viewBox="0 0 80 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="15" stroke="#D4AF37" stroke-width="2"/>
+            <text x="16" y="21" font-family="Georgia, serif" font-size="12" fill="#D4AF37" text-anchor="middle">АЗЬ</text>
+          </svg>
+          <h3 class="footer-frame__brand-name">АЗЬ ЕСЬМ</h3>
+        </div>
+        <p class="footer-frame__tagline">
+          Русская идентичность в современной уличной одежде
+        </p>
+      </div>
+      
+      <!-- Колонка 2: Навигация -->
+      <div class="footer-frame__column">
+        <h4 class="footer-frame__column-title">Навигация</h4>
+        <ul class="footer-frame__links">
+          <li class="footer-frame__link-item">
+            <a href="/" class="footer-frame__link">Главная</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/philosophy" class="footer-frame__link">Философия бренда</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/catalog" class="footer-frame__link">Каталог</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/delivery" class="footer-frame__link">Оплата и доставка</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/cart" class="footer-frame__link">Корзина</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Колонка 3: Категории -->
+      <div class="footer-frame__column">
+        <h4 class="footer-frame__column-title">Категории</h4>
+        <ul class="footer-frame__links">
+          <li class="footer-frame__link-item">
+            <a href="/catalog/hoodies" class="footer-frame__link">Худи</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/catalog/tshirts" class="footer-frame__link">Футболки</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/catalog/shirts" class="footer-frame__link">Рубашки</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/catalog/pants" class="footer-frame__link">Брюки</a>
+          </li>
+          <li class="footer-frame__link-item">
+            <a href="/catalog/accessories" class="footer-frame__link">Аксессуары</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Колонка 4: Контакты -->
+      <div class="footer-frame__column">
+        <h4 class="footer-frame__column-title">Контакты</h4>
+        <ul class="footer-frame__links">
+          <li class="footer-frame__contact-item">
+            <svg class="footer-frame__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:info@azezm.ru" class="footer-frame__contact-link">
+              info@azezm.ru
+            </a>
+          </li>
+          <li class="footer-frame__contact-item">
+            <svg class="footer-frame__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            <a href="https://instagram.com/azezm" target="_blank" class="footer-frame__contact-link">
+              @azezm
+            </a>
+          </li>
+          <li class="footer-frame__contact-item">
+            <svg class="footer-frame__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            <a href="https://vk.com/azezm" target="_blank" class="footer-frame__contact-link">
+              VK
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- Копирайт -->
+    <div class="footer-frame__bottom">
+      <p class="footer-frame__copyright">
+        © 2025 Азь Есьм. Все права защищены.
+      </p>
+    </div>
+    
+  </div>
+</footer>
+
+<!--
+╔═══════════════════════════════════════════════════════════════════╗
+║                        ПАРАМЕТРЫ ФРЕЙМА                           ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+Frame dimensions:
+  Width: 1200px (фиксированная)
+  Height: 400px
+  
+Layout:
+  Container: 1120px (1200 - 80px padding)
+  Padding: 48px top/bottom, 40px left/right
+  
+Grid (4 columns):
+  Column width: 260px
+  Gap: 40px
+  Calculation: (1120 - 120) / 4 = 250px + spacing = 260px
+  
+Column structure:
+  - Brand (col 1): Logo + tagline
+  - Navigation (col 2): 5 links
+  - Categories (col 3): 5 links
+  - Contacts (col 4): 3 links with icons
+  
+Element heights:
+  Grid: ~240px (links + titles)
+  Gap: 40px
+  Bottom: 32px padding + 14px text = ~46px
+  Total: 240 + 40 + 46 + 96px padding = ~420px (close to 400px)
+
+Colors:
+  Background: #1A1F3A
+  Border top: rgba(212,175,55,0.2)
+  Title: #D4AF37
+  Links: rgba(255,255,255,0.6) → #FFFFFF on hover
+  Copyright: rgba(255,255,255,0.4)
+
+Fonts:
+  Brand name: Georgia, 24px, 0.1em spacing
+  Column title: Sans-serif, 16px, 500 weight
+  Links: Sans-serif, 14px
+  Tagline: Sans-serif, 14px
+  Copyright: Sans-serif, 14px
+
+Grid calculation:
+  (1120px - 40px×3) / 4 = 260px per column
+
+ВАЖНО ДЛЯ TILDA API:
+- Ширина = 1200px (точно!)
+- 4 равные колонки по 260px
+- Все элементы выровнены
+- Иконки inline SVG (16×16px)
+- Hover эффекты на ссылках
+
+ЗАМЕНИТЕ:
+1. Логотип SVG (строка 130)
+2. Email: info@azezm.ru
+3. Instagram: @azezm
+4. VK: vk.com/azezm
+5. Все ссылки на страницы
+-->
